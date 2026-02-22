@@ -50,6 +50,7 @@ jobs:
           name: dist_githubpages
           path: ./dist_githubpages
           retention-days: 1
+        continue-on-error: true
 
   deploy:
     environment:
@@ -69,6 +70,16 @@ jobs:
         with:
           name: dist_githubpages
           path: ./dist_githubpages
+        continue-on-error: true
+
+      - name: Debug dist_githubpages
+        run: |
+          echo "Checking dist_githubpages folder..."
+          ls -la dist_githubpages/ || echo "dist_githubpages folder does not exist"
+          if [ -d "dist_githubpages" ]; then
+            echo "Contents of dist_githubpages:"
+            find dist_githubpages -type f -o -type d | head -20
+          fi
 
       - name: Checkout target repository
         uses: actions/checkout@v4
@@ -84,10 +95,18 @@ jobs:
           find deploy-target -mindepth 1 -maxdepth 1 ! -name '.git' -exec rm -rf {} +
           # ビルド成果物をコピー
           cp -r dist/* deploy-target/
-          # dist_githubpages フォルダ配下のファイルもコピー（存在する場合）
-          #if [ -d "dist_githubpages" ] && [ "$(ls -A dist_githubpages 2>/dev/null)" ]; then
-          cp -r dist_githubpages/* deploy-target/
-          #fi
+          # dist_githubpages フォルダ配下のファイルもコピー（隠しファイル/フォルダも含む）
+          if [ -d "dist_githubpages" ] && [ "$(ls -A dist_githubpages 2>/dev/null)" ]; then
+            echo "Copying dist_githubpages contents..."
+            # dotglob を有効にして隠しファイル/フォルダも含めてコピー
+            shopt -s dotglob
+            cp -r dist_githubpages/* deploy-target/
+            shopt -u dotglob
+            echo "Copied files:"
+            ls -la deploy-target/ | grep -E "(app-ads|\.github)" || true
+          else
+            echo "Warning: dist_githubpages folder is empty or does not exist"
+          fi
 
       - name: Deploy to GitHub Pages repository
         working-directory: deploy-target
