@@ -64,6 +64,12 @@ jobs:
           name: dist
           path: ./dist
 
+      - name: Download dist_githubpages artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: dist_githubpages
+          path: ./dist_githubpages
+
       - name: Checkout target repository
         uses: actions/checkout@v4
         with:
@@ -78,8 +84,10 @@ jobs:
           find deploy-target -mindepth 1 -maxdepth 1 ! -name '.git' -exec rm -rf {} +
           # ビルド成果物をコピー
           cp -r dist/* deploy-target/
-          # dist_githubpages フォルダ配下のファイルもコピー
-          cp -r dist_githubpages/* deploy-target/
+          # dist_githubpages フォルダ配下のファイルもコピー（存在する場合）
+          if [ -d "dist_githubpages" ] && [ "$(ls -A dist_githubpages 2>/dev/null)" ]; then
+            cp -r dist_githubpages/* deploy-target/
+          fi
 
       - name: Deploy to GitHub Pages repository
         working-directory: deploy-target
