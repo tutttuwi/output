@@ -1,4 +1,4 @@
-<h1 align="center">Hi, I'm Tomoaki Tsutsui <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="28"></h1>
+<h1><span style="float:left; margin-right:5px;">Hi, I'm Tomoaki Tsutsui</span><img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="28"></h1>
 
 <p align="center">
   <a href="https://github.com/DenverCoder1/readme-typing-svg"><img src="https://readme-typing-svg.herokuapp.com?lines=Software+Developer;Flutter Engineer;MobileApp%20|%20DDD%20|%20OOP%20;Always%20learning%20new%20things&center=true&width=500&height=50"></a>
