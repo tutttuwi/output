@@ -117,3 +117,31 @@ jobs:
           git add .
           git commit -m "Deploy from tutttuwi/output - $(date +'%Y-%m-%d %H:%M:%S')" || exit 0
           git push origin master
+
+      - name: Checkout source repository
+        uses: actions/checkout@v4
+        with:
+          path: source-repo
+
+      - name: Checkout tutttuwi/tutttuwi repository
+        uses: actions/checkout@v4
+        with:
+          repository: tutttuwi/tutttuwi
+          token: ${{ secrets.DEPLOY_TOKEN }}
+          path: profile-repo
+          ref: main
+
+      - name: Update README.md from about.md
+        run: |
+          # about.mdの内容をREADME.mdにコピー
+          cp source-repo/src/content/spec/about.md profile-repo/README.md
+          echo "README.md updated successfully"
+
+      - name: Commit and push to tutttuwi/tutttuwi repository
+        working-directory: profile-repo
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add README.md
+          git diff --staged --quiet || git commit -m "Update README.md from tutttuwi/output - $(date +'%Y-%m-%d %H:%M:%S')"
+          git push origin main || echo "No changes to commit or push failed"
