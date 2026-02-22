@@ -50,6 +50,7 @@ jobs:
           name: dist_githubpages
           path: ./dist_githubpages
           retention-days: 1
+          include-hidden-files: true
         continue-on-error: true
 
   deploy:
