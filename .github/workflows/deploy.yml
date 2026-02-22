@@ -1,0 +1,86 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main  # または master（リポジトリのデフォルトブランチに合わせる）
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 9
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'pnpm'
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Build
+        run: pnpm build
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload build artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: dist
+          path: ./dist
+          retention-days: 1
+
+  deploy:
+    environment:
+      name: github-pages
+      url: https://tutttuwi.github.io
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Download build artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: dist
+          path: ./dist
+
+      - name: Checkout target repository
+        uses: actions/checkout@v4
+        with:
+          repository: tutttuwi/tutttuwi.github.io
+          token: ${{ secrets.DEPLOY_TOKEN }}
+          path: deploy-target
+
+      - name: Copy build files
+        run: |
+          # 既存のファイルを削除（.git を除く）
+          find deploy-target -mindepth 1 -maxdepth 1 ! -name '.git' -exec rm -rf {} +
+          # ビルド成果物をコピー
+          cp -r dist/* deploy-target/
+
+      - name: Deploy to GitHub Pages repository
+        working-directory: deploy-target
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add .
+          git commit -m "Deploy from tutttuwi/output - $(date +'%Y-%m-%d %H:%M:%S')" || exit 0
+          git push origin main || git push origin master
