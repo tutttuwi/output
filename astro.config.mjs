@@ -11,6 +11,7 @@ import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import rehypeComponents from "rehype-components"; /* Render the custom directive content */
 import rehypeKatex from "rehype-katex";
 import rehypeSlug from "rehype-slug";
+import { rehypeMermaid } from "./src/plugins/rehype-mermaid.mjs";
 import remarkDirective from "remark-directive"; /* Handle directives */
 import remarkGithubAdmonitionsToDirectives from "remark-github-admonitions-to-directives";
 import remarkMath from "remark-math";
@@ -69,8 +70,14 @@ export default defineConfig({
 					'shellsession': {
 						showLineNumbers: false,
 					},
+					'mermaid': {
+						// Exclude mermaid from expressive-code processing
+						// It will be handled by our custom rehype plugin
+					},
 				},
 			},
+			// Exclude mermaid language from processing
+			excludeLanguages: ['mermaid'],
 			styleOverrides: {
 				codeBackground: "var(--codeblock-bg)",
 				borderRadius: "0.75rem",
@@ -114,6 +121,7 @@ export default defineConfig({
 		],
 		rehypePlugins: [
 			rehypeKatex,
+			rehypeMermaid,
 			rehypeSlug,
 			[
 				rehypeComponents,

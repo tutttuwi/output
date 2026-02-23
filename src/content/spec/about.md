@@ -119,15 +119,15 @@ config:
   theme: 'dark'
 ---
 timeline
-        title Engineer Journey
-        section 2014 - 2015 <br> Corp-A
+        <!-- title Engineer Journey -->
+        section 2014 - 2015 Corp-A
           Healthcare : Medical accounting system implementation/maintenance : Subsystem development (COBOL)
-        section 2015 - 2020 <br> Corp-B
+        section 2015 - 2020 Corp-B
           EC : Android market development / Tester
           Transportation : Portal site development : Backend development
                : Alexa Skill Kit development
           Human resources : Skill management system development
-        section 2020 - 2026 <br> Corp-C
+        section 2020 - 2026 Corp-C
           Broadband : Core system development : System renewal : Legacy system improvement
           Healthcare : Mobile app development : Backend development : Web app development
 ```

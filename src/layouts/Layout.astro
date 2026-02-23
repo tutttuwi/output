@@ -147,6 +147,17 @@ const bannerOffset =
 
 		<link rel="alternate" type="application/rss+xml" title={profileConfig.name} href={`${Astro.site}rss.xml`}/>
 
+		<!-- MermaidJS -->
+		<script type="module">
+			import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+			mermaid.initialize({ 
+				startOnLoad: true,
+				theme: 'dark',
+				securityLevel: 'loose'
+			});
+			window.mermaid = mermaid;
+		</script>
+
 	</head>
 	<body class=" min-h-screen transition " class:list={[{"lg:is-home": isHomePage, "enable-banner": enableBanner}]}
 		  data-overlayscrollbars-initialize
@@ -404,7 +415,13 @@ const setup = () => {
 			navbar.classList.add('navbar-hidden')
 		}
 	})
-	window.swup.hooks.on('content:replace', initCustomScrollbar)
+	window.swup.hooks.on('content:replace', () => {
+		initCustomScrollbar();
+		// Reinitialize MermaidJS after content replacement
+		if (window.mermaid) {
+			window.mermaid.run();
+		}
+	})
 	window.swup.hooks.on('visit:start', (visit: {to: {url: string}}) => {
 		// change banner height immediately when a link is clicked
 		const bodyElement = document.querySelector('body')
