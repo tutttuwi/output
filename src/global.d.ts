@@ -11,6 +11,16 @@ declare global {
 				}>;
 			}>;
 		};
+		mermaid?: {
+			initialize: (config: {
+				startOnLoad?: boolean;
+				theme?: string;
+				securityLevel?: string;
+			}) => void;
+			run: (config?: {
+				querySelector?: string;
+			}) => void;
+		};
 	}
 }
 
