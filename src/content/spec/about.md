@@ -23,48 +23,43 @@ Here are some ideas to get you started:
 - ⚡ Fun fact: ...
 -->
 
+<!--
+[icon]
+- use: <https://thuongtruong109.github.io/icoziv/>
+- find here: <https://thuongtruong109.github.io/icoziv/>
+-->
+
 ### 🛠 &nbsp;Tech Stack
 
 #### Frontend
 
-![HTML5](https://img.shields.io/badge/-HTML5-05122A?style=flat&logo=html5)
-![CSS3](https://img.shields.io/badge/-CSS3-05122A?style=flat&logo=css3)
-![JavaScript](https://img.shields.io/badge/-JavaScript-05122A?style=flat&logo=javascript)
-![TypeScript](https://img.shields.io/badge/-TypeScript-05122A?style=flat&logo=typescript)
-![Vue.js](https://img.shields.io/badge/-Vue.js-05122A?style=flat&logo=vuedotjs)
-![Bootstrap](https://img.shields.io/badge/-Bootstrap-05122A?style=flat&logo=bootstrap)
-![Angular](https://img.shields.io/badge/-Angular-05122A?style=flat&logo=angular)
-![Next.js](https://img.shields.io/badge/-Next.js-000000?style=flat&logo=nextdotjs)
+<p>
+  <img src="https://i.icoziv.workers.dev/icons?i=html,css,javascript,typescript,vuejs,bootstrap,angularjs,nextjs" alt="Skills" />
+</p>
 
 #### Backend
 
-![Java](https://img.shields.io/badge/-Java-05122A?style=flat&logo=java)
-![Spring Boot](https://img.shields.io/badge/-Spring_Boot-05122A?style=flat&logo=springboot)
-![Spring Batch](https://img.shields.io/badge/-Spring_Batch-05122A?style=flat&logo=springboot)
-![MyBatis](https://img.shields.io/badge/-MyBatis-05122A?style=flat)
-![Doma2](https://img.shields.io/badge/-Doma2-05122A?style=flat)
-![JPA](https://img.shields.io/badge/-JPA-05122A?style=flat)
-![Node.js](https://img.shields.io/badge/-Node.js-05122A?style=flat&logo=node.js)
-![Python](https://img.shields.io/badge/-Python-05122A?style=flat&logo=python)
+<p>
+  <img src="https://i.icoziv.workers.dev/icons?i=java,spring,nodejs,python" alt="Skills" />
+</p>
 
 #### ☁️ Cloud & Database
 
-![AWS](https://img.shields.io/badge/-AWS-05122A?style=flat&logo=amazonaws)
-![GCP](https://img.shields.io/badge/-GCP-4285F4?style=flat&logo=googlecloud)
-![OracleDB](https://img.shields.io/badge/-OracleDB-05122A?style=flat&logo=oracle)
-![PostgreSQL](https://img.shields.io/badge/-PostgreSQL-05122A?style=flat&logo=postgresql)
-![DB2](https://img.shields.io/badge/-DB2-05122A?style=flat)
-![Kubernetes](https://img.shields.io/badge/-Kubernetes-326CE5?style=flat&logo=kubernetes)
+<p>
+  <img src="https://i.icoziv.workers.dev/icons?i=amazonewebservices-dark,googlecloud,oracle,postgresql,kubernetes" alt="Skills" />
+</p>
 
 #### Tools & Environments
 
-![Git](https://img.shields.io/badge/-Git-05122A?style=flat&logo=git)
-![GitLab](https://img.shields.io/badge/-GitLab-05122A?style=flat&logo=gitlab)
-![Linux](https://img.shields.io/badge/-Linux-05122A?style=flat&logo=linux)
+<p>
+  <img src="https://i.icoziv.workers.dev/icons?i=git,gitlab,linux" alt="Skills" />
+</p>
 
 #### Misc
 
-![VBA](https://img.shields.io/badge/-VBA-05122A?style=flat&logo=microsoftexcel)
+<p>
+  <img src="https://i.icoziv.workers.dev/icons?i=visualbasic" alt="Skills" />
+</p>
 
 ### 💳 Github Profile Summary Card
 
@@ -103,9 +98,32 @@ Here are some ideas to get you started:
 - [Chrome Extension](https://chromewebstore.google.com/detail/fastmemo/ikggcjldloflbjfafhhjpnbbjkpnphna) - Fast Memo
 - [Chrome Extension](https://chromewebstore.google.com/detail/quickframer/emfekienjacgppfhiojogchdeoonhdlg) - Quick Framer
 - [Utility](https://github.com/tutttuwi/dbdump) - dbdump
+- [Application](https://github.com/tutttuwi/springboot-management-starter) - springboot-management-starter
 - [Application](http://contents.ang-fnt-suumo.t-tsutsui.s3-website-ap-northeast-1.amazonaws.com/property-list) - SUUMO Bukken Hikaku
 - [Application](https://github.com/tutttuwi/aggregateWordsOfLyric) - Analize Lyric Words App
 - [iOS App](https://apps.apple.com/jp/app/id6748651351) - 医療情報技師対策道場
 - [Android App](https://play.google.com/store/apps/details?id=com.tutttuwi.app.medinfotech) - 医療情報技師対策道場
 - [iOS App](https://apps.apple.com/jp/app/id6747262236) - シンプル万歩計
 - [Android App](https://play.google.com/store/apps/details?id=com.tutttuwi.app.simplepedometer) - シンプル万歩計
+
+### Engineer Journey
+
+```mermaid
+---
+config:
+  logLevel: 'debug'
+  theme: 'dark'
+---
+timeline
+        title Engineer Journey
+        section 2014 - 2015 <br> Corp-A
+          Healthcare : Medical accounting system implementation/maintenance : Subsystem development (COBOL)
+        section 2015 - 2020 <br> Corp-B
+          EC : Android market development / Tester
+          Transportation : Portal site development : Backend development
+               : Alexa Skill Kit development
+          Human resources : Skill management system development
+        section 2020 - 2026 <br> Corp-C
+          Broadband : Core system development : System renewal : Legacy system improvement
+          Healthcare : Mobile app development : Backend development : Web app development
+```
