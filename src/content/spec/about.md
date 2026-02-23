@@ -34,7 +34,7 @@ Here are some ideas to get you started:
 #### Frontend
 
 <p>
-  <img src="https://i.icoziv.workers.dev/icons?i=html,css,javascript,typescript,vuejs,bootstrap,angularjs,nextjs" alt="Skills" />
+  <img src="https://i.icoziv.workers.dev/icons?i=flutter-dark,html,css,javascript,typescript,vuejs,bootstrap,angularjs,nextjs" alt="Skills" />
 </p>
 
 #### Backend
@@ -46,19 +46,19 @@ Here are some ideas to get you started:
 #### ☁️ Cloud & Database
 
 <p>
-  <img src="https://i.icoziv.workers.dev/icons?i=amazonewebservices-dark,googlecloud,oracle,postgresql,kubernetes" alt="Skills" />
+  <img src="https://i.icoziv.workers.dev/icons?i=amazonewebservices-dark,azure-dark,googlecloud,postgresql,kubernetes,mongodb,sqlserver1-dark" alt="Skills" />
 </p>
 
 #### Tools & Environments
 
 <p>
-  <img src="https://i.icoziv.workers.dev/icons?i=git,gitlab,linux" alt="Skills" />
+  <img src="https://i.icoziv.workers.dev/icons?i=git,gitlab,linux,visualstudiocode-dark,windows-dark,eclipse-dark" alt="Skills" />
 </p>
 
 #### Misc
 
 <p>
-  <img src="https://i.icoziv.workers.dev/icons?i=visualbasic" alt="Skills" />
+  <img src="https://i.icoziv.workers.dev/icons?i=adobeillustrator,adobephotoshop,apachemaven-dark,chai-dark,gulp,mocha-dark" alt="Skills" />
 </p>
 
 ### 💳 Github Profile Summary Card
@@ -105,6 +105,10 @@ Here are some ideas to get you started:
 - [Android App](https://play.google.com/store/apps/details?id=com.tutttuwi.app.medinfotech) - 医療情報技師対策道場
 - [iOS App](https://apps.apple.com/jp/app/id6747262236) - シンプル万歩計
 - [Android App](https://play.google.com/store/apps/details?id=com.tutttuwi.app.simplepedometer) - シンプル万歩計
+
+### Certification
+
+please check [linkedin page](https://www.linkedin.com/in/tutttuwi/details/certifications/)
 
 ### Engineer Journey
 
