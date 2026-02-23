@@ -61,36 +61,6 @@ Here are some ideas to get you started:
   <img src="https://i.icoziv.workers.dev/icons?i=adobeillustrator,adobephotoshop,apachemaven-dark,chai-dark,gulp,mocha-dark" alt="Skills" />
 </p>
 
-### 💳 Github Profile Summary Card
-
-<div>
-    <img height="180em" src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=tutttuwi&theme=github_dark"/>
-</div>
-
-### ⚙️ &nbsp;GitHub Stats
-
-<p>
-<a href="https://github.com/tutttuwi">
-  <img height="180em" src="https://github-readme-stats-eight-theta.vercel.app/api?username=tutttuwi&show_icons=true&theme=algolia&include_all_commits=true&count_private=true"/>
-  <img height="180em" src="https://github-readme-stats-eight-theta.vercel.app/api/top-langs/?username=tutttuwi&layout=compact&langs_count=8&theme=algolia&include_all_commits=true&count_private=true"/>
-
-</a>
-</p>
-
-### ⭐️ &nbsp;GitHub Activity
-
-<a href="https://github.com/tutttuwi">
-
-  <img src="https://github-readme-activity-graph.vercel.app/graph??username=tutttuwi&theme=github-compact" alt="tutttuwi's GitHub activity graph" />
-</a>  
-  
-### 🤝🏻 &nbsp;Connect with Me
-
-<p>
-<a href="https://www.linkedin.com/in/tutttuwi/"><img src="https://img.shields.io/badge/-tutttuwi%20LInedin-0077B5?style=flat&logo=Linkedin&logoColor=white"/></a>
-<a href="mailto:t.tsutsui9117@gmail.com"><img src="https://img.shields.io/badge/-t.tsutsui9117@gmail.com-D14836?style=flat&logo=Gmail&logoColor=white"/></a>
-</p><br>
-
 ### 🌈 Applications I developed
 
 - [Chrome Extension](https://chromewebstore.google.com/detail/gcal-mine/pjamieabipajfibinbhpmgfpbpidlchk) - Gcal-Mine
@@ -131,3 +101,33 @@ timeline
           Broadband : Core system development : System renewal : Legacy system improvement
           Healthcare : Mobile app development : Backend development : Web app development
 ```
+
+### 💳 Github Profile Summary Card
+
+<div>
+    <img height="180em" src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=tutttuwi&theme=github_dark"/>
+</div>
+
+### ⚙️ &nbsp;GitHub Stats
+
+<p>
+<a href="https://github.com/tutttuwi">
+  <img height="180em" src="https://github-readme-stats-eight-theta.vercel.app/api?username=tutttuwi&show_icons=true&theme=algolia&include_all_commits=true&count_private=true"/>
+  <img height="180em" src="https://github-readme-stats-eight-theta.vercel.app/api/top-langs/?username=tutttuwi&layout=compact&langs_count=8&theme=algolia&include_all_commits=true&count_private=true"/>
+
+</a>
+</p>
+
+### ⭐️ &nbsp;GitHub Activity
+
+<a href="https://github.com/tutttuwi">
+
+  <img src="https://github-readme-activity-graph.vercel.app/graph??username=tutttuwi&theme=github-compact" alt="tutttuwi's GitHub activity graph" />
+</a>  
+  
+### 🤝🏻 &nbsp;Connect with Me
+
+<p>
+<a href="https://www.linkedin.com/in/tutttuwi/"><img src="https://img.shields.io/badge/-tutttuwi%20LInedin-0077B5?style=flat&logo=Linkedin&logoColor=white"/></a>
+<a href="mailto:t.tsutsui9117@gmail.com"><img src="https://img.shields.io/badge/-t.tsutsui9117@gmail.com-D14836?style=flat&logo=Gmail&logoColor=white"/></a>
+</p><br>
