@@ -39,6 +39,9 @@ const hasBannerLink = !!siteConfig.banner.credit.url;
 const mainPanelTop = siteConfig.banner.enable
 	? `calc(${BANNER_HEIGHT}vh - ${MAIN_PANEL_OVERLAPS_BANNER_HEIGHT}rem)`
 	: "5.5rem";
+
+// Check if current page is a post page
+const isPostPage = Astro.url.pathname.startsWith('/posts/');
 ---
 
 <Layout title={title} banner={banner} description={description} lang={lang} setOGTypeArticle={setOGTypeArticle}>
@@ -63,8 +66,10 @@ const mainPanelTop = siteConfig.banner.enable
 <div class="absolute w-full z-30 pointer-events-none" style={`top: ${mainPanelTop}`}>
     <!-- The pointer-events-none here prevent blocking the click event of the TOC -->
     <div class="relative max-w-[var(--page-width)] mx-auto pointer-events-auto">
-        <div id="main-grid" class="transition duration-700 w-full left-0 right-0 grid grid-cols-[17.5rem_auto] grid-rows-[auto_1fr_auto] lg:grid-rows-[auto]
-    mx-auto gap-4 px-0 md:px-4"
+        <div id="main-grid" class:list={[
+            "transition duration-700 w-full left-0 right-0 grid grid-rows-[auto_1fr_auto] lg:grid-rows-[auto] mx-auto gap-4 px-0 md:px-4",
+            isPostPage ? "grid-cols-[auto]" : "grid-cols-[17.5rem_auto]"
+        ]}
         >
             <!-- Banner image credit -->
             {hasBannerCredit && <a href={siteConfig.banner.credit.url} id="banner-credit" target="_blank" rel="noopener" aria-label="Visit image source"
@@ -82,7 +87,10 @@ const mainPanelTop = siteConfig.banner.enable
 
             <SideBar class="mb-4 row-start-2 row-end-3 col-span-2 lg:row-start-1 lg:row-end-2 lg:col-span-1 lg:max-w-[17.5rem] onload-animation" headings={headings}></SideBar>
 
-            <main id="swup-container" class="transition-swup-fade col-span-2 lg:col-span-1 overflow-hidden">
+            <main id="swup-container" class:list={[
+                "transition-swup-fade overflow-hidden",
+                isPostPage ? "col-span-1" : "col-span-2 lg:col-span-1"
+            ]}>
                 <div id="content-wrapper" class="onload-animation">
                     <!-- the overflow-hidden here prevent long text break the layout-->
                     <!-- make id different from windows.swup global property -->
@@ -123,3 +131,54 @@ const mainPanelTop = siteConfig.banner.enable
     </div>
 </div>
 </Layout>
+
+<script>
+function toggleSidebarForPostPage(pathname: string) {
+	const sidebar = document.getElementById('sidebar');
+	const mainGrid = document.getElementById('main-grid');
+	const mainContainer = document.getElementById('swup-container');
+	
+	if (!sidebar || !mainGrid || !mainContainer) return;
+	
+	const isPostPage = pathname.startsWith('/posts/');
+	
+	if (isPostPage) {
+		// Hide sidebar and adjust grid layout for post pages
+		sidebar.classList.add('hidden');
+		mainGrid.classList.remove('grid-cols-[17.5rem_auto]');
+		mainGrid.classList.add('grid-cols-[auto]');
+		mainContainer.classList.remove('col-span-2', 'lg:col-span-1');
+		mainContainer.classList.add('col-span-1');
+	} else {
+		// Show sidebar and restore normal grid layout
+		sidebar.classList.remove('hidden');
+		mainGrid.classList.remove('grid-cols-[auto]');
+		mainGrid.classList.add('grid-cols-[17.5rem_auto]');
+		mainContainer.classList.remove('col-span-1');
+		mainContainer.classList.add('col-span-2', 'lg:col-span-1');
+	}
+}
+
+// Initialize on page load
+toggleSidebarForPostPage(window.location.pathname);
+
+// Setup Swup hooks for client-side navigation
+const setup = () => {
+	window.swup.hooks.on('visit:start', (visit: {to: {url: string}}) => {
+		// Update sidebar visibility immediately when navigation starts
+		const url = new URL(visit.to.url, window.location.origin);
+		toggleSidebarForPostPage(url.pathname);
+	});
+	
+	window.swup.hooks.on('content:replace', () => {
+		// Update sidebar visibility after content is replaced
+		toggleSidebarForPostPage(window.location.pathname);
+	});
+};
+
+if (window?.swup?.hooks) {
+	setup();
+} else {
+	document.addEventListener('swup:enable', setup);
+}
+</script>
