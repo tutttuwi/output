@@ -1,7 +1,7 @@
 ---
 title: AmazonAlexa開発ガイド
 published: 2019-01-01
-image: /img/cover/2019_01_alexa_handson.jpg
+image: /img/cover/2019_01_alexa_handson.JPG
 tags: ["教科書", "AI"]
 category: 書籍
 draft: false
@@ -11,7 +11,7 @@ draft: false
 # AmazonAlexa開発ガイド
 
 <div style="text-align:center; margin-bottom: 40px">
-<img src="/img/cover/2019_01_alexa_handson.jpg" alt="2019_01_alexa_handson" title="2019_01_alexa_handson" style="width:980px">
+<img src="/img/cover/2019_01_alexa_handson.JPG" alt="2019_01_alexa_handson" title="2019_01_alexa_handson" style="width:980px">
 </div>
 
 - 目次

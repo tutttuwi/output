@@ -1,7 +1,7 @@
 ---
 title: オラクル認定資格教科書JavaプログラマGoldSE7
 published: 2015-04-01
-image: /img/cover/2015_04_java_gold.jpg
+image: /img/cover/2015_04_java_gold.JPG
 tags: ["教科書", "Java"]
 category: 書籍
 draft: false
@@ -11,7 +11,7 @@ draft: false
 # オラクル認定資格教科書JavaプログラマGoldSE7
 
 <div style="text-align:center; margin-bottom: 40px">
-<img src="/img/cover/2015_04_java_gold.jpg" alt="2015_04_java_gold" title="2015_04_java_gold" style="width:980px">
+<img src="/img/cover/2015_04_java_gold.JPG" alt="2015_04_java_gold" title="2015_04_java_gold" style="width:980px">
 </div>
 
 - [目次](https://www.shoeisha.co.jp/book/detail/9784798133379)

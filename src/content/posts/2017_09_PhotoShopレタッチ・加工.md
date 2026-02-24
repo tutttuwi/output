@@ -1,7 +1,7 @@
 ---
 title: Photoshopレタッチ・加工
 published: 2017-09-01
-image: /img/cover/2017_09_photoshop.jpg
+image: /img/cover/2017_09_photoshop.JPG
 tags: ["レシピ", "再読", "EX"]
 category: 書籍
 draft: false
@@ -11,7 +11,7 @@ draft: false
 # Photoshopレタッチ・加工
 
 <div style="text-align:center; margin-bottom: 40px">
-<img src="/img/cover/2017_09_photoshop.jpg" alt="2017_09_photoshop" title="2017_09_photoshop" style="width:980px">
+<img src="/img/cover/2017_09_photoshop.JPG" alt="2017_09_photoshop" title="2017_09_photoshop" style="width:980px">
 </div>
 
 ## 学んだこと

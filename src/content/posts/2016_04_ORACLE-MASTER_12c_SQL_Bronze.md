@@ -1,7 +1,7 @@
 ---
 title: ORACLE MASTER Oracle Database12c SQL Bronze
 published: 2016-04-01
-image: /img/cover/2016_04_sql.jpg
+image: /img/cover/2016_04_sql.JPG
 tags: ["問題集", "DB"]
 category: 書籍
 draft: false
@@ -11,7 +11,7 @@ draft: false
 # ORACLE MASTER Oracle Database12c Bronze
 
 <div style="text-align:center; margin-bottom: 40px">
-<img src="/img/cover/2016_04_sql.jpg" alt="2016_04_sql" title="2016_04_sql" style="width:980px">
+<img src="/img/cover/2016_04_sql.JPG" alt="2016_04_sql" title="2016_04_sql" style="width:980px">
 </div>
 
 ## 学んだこと

@@ -1,7 +1,7 @@
 ---
 title: オラクル認定資格教科書JavaプログラマSilverSE7
 published: 2014-07-01
-image: /img/cover/2014_07_java_silver.jpg
+image: /img/cover/2014_07_java_silver.JPG
 tags: ["教科書", "Java"]
 category: 書籍
 draft: false
@@ -11,7 +11,7 @@ draft: false
 # オラクル認定資格教科書 Javaプログラマ Silver SE 7
 
 <div style="text-align:center; margin-bottom: 40px">
-<img src="/img/cover/2014_07_java_silver.jpg" alt="2014_07_java_silver" title="2014_07_java_silver" style="width:980px">
+<img src="/img/cover/2014_07_java_silver.JPG" alt="2014_07_java_silver" title="2014_07_java_silver" style="width:980px">
 </div>
 
 - 目次

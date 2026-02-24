@@ -1,7 +1,7 @@
 ---
 title: LPIC Level1 教科書
 published: 2018-04-01
-image: /img/cover/2018_04_lpic.jpg
+image: /img/cover/2018_04_lpic.JPG
 tags: ["教科書", "LPIC"]
 category: 書籍
 draft: false
@@ -11,7 +11,7 @@ draft: false
 # LPIC Level1 教科書
 
 <div style="text-align:center; margin-bottom: 40px">
-<img src="/img/cover/2018_04_lpic.jpg" alt="2018_04_lpic" title="2018_04_lpic" style="width:980px">
+<img src="/img/cover/2018_04_lpic.JPG" alt="2018_04_lpic" title="2018_04_lpic" style="width:980px">
 </div>
 
 - 目次

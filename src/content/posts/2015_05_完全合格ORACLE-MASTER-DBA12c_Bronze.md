@@ -1,7 +1,7 @@
 ---
 title: 完全合格ORACLE-MASTER-DBA12c_Bronze
 published: 2015-04-01
-image: /img/cover/2015_05_dba.jpg
+image: /img/cover/2015_05_dba.JPG
 tags: ["教科書", "DB"]
 category: 書籍
 draft: false
@@ -11,7 +11,7 @@ draft: false
 # 完全合格ORACLE-MASTER-DBA12c_Bronze
 
 <div style="text-align:center; margin-bottom: 40px">
-<img src="/img/cover/2015_05_dba.jpg" alt="2015_05_dba" title="2015_05_dba" style="width:980px">
+<img src="/img/cover/2015_05_dba.JPG" alt="2015_05_dba" title="2015_05_dba" style="width:980px">
 </div>
 
 ## 学んだこと
