@@ -65,10 +65,10 @@ const isPostPage = Astro.url.pathname.startsWith('/posts/');
 <!-- Main content -->
 <div class="absolute w-full z-30 pointer-events-none" style={`top: ${mainPanelTop}`}>
     <!-- The pointer-events-none here prevent blocking the click event of the TOC -->
-    <div class="relative max-w-[var(--page-width)] mx-auto pointer-events-auto">
+    <div class="relative max-w-[var(--page-width)] mx-auto pointer-events-auto overflow-x-hidden">
         <div id="main-grid" class:list={[
-            "transition duration-700 w-full left-0 right-0 grid grid-rows-[auto_1fr_auto] lg:grid-rows-[auto] mx-auto gap-4 px-0 md:px-4",
-            isPostPage ? "grid-cols-[auto]" : "grid-cols-[17.5rem_auto]"
+            "transition duration-700 w-full min-w-0 left-0 right-0 grid grid-rows-[auto_1fr_auto] lg:grid-rows-[auto] mx-auto lg:gap-4 px-0 md:px-4",
+            isPostPage ? "grid-cols-1 lg:grid-cols-[auto]" : "grid-cols-1 lg:grid-cols-[17.5rem_auto]"
         ]}
         >
             <!-- Banner image credit -->
@@ -88,7 +88,7 @@ const isPostPage = Astro.url.pathname.startsWith('/posts/');
             <SideBar class="mb-4 row-start-2 row-end-3 col-span-2 lg:row-start-1 lg:row-end-2 lg:col-span-1 lg:max-w-[17.5rem] onload-animation" headings={headings}></SideBar>
 
             <main id="swup-container" class:list={[
-                "transition-swup-fade overflow-hidden",
+                "transition-swup-fade overflow-hidden min-w-0",
                 isPostPage ? "col-span-1" : "col-span-2 lg:col-span-1"
             ]}>
                 <div id="content-wrapper" class="onload-animation">
@@ -145,15 +145,15 @@ function toggleSidebarForPostPage(pathname: string) {
 	if (isPostPage) {
 		// Hide sidebar and adjust grid layout for post pages
 		sidebar.classList.add('hidden');
-		mainGrid.classList.remove('grid-cols-[17.5rem_auto]');
-		mainGrid.classList.add('grid-cols-[auto]');
+		mainGrid.classList.remove('grid-cols-1', 'lg:grid-cols-[17.5rem_auto]');
+		mainGrid.classList.add('grid-cols-1', 'lg:grid-cols-[auto]');
 		mainContainer.classList.remove('col-span-2', 'lg:col-span-1');
 		mainContainer.classList.add('col-span-1');
 	} else {
 		// Show sidebar and restore normal grid layout
 		sidebar.classList.remove('hidden');
-		mainGrid.classList.remove('grid-cols-[auto]');
-		mainGrid.classList.add('grid-cols-[17.5rem_auto]');
+		mainGrid.classList.remove('grid-cols-1', 'lg:grid-cols-[auto]');
+		mainGrid.classList.add('grid-cols-1', 'lg:grid-cols-[17.5rem_auto]');
 		mainContainer.classList.remove('col-span-1');
 		mainContainer.classList.add('col-span-2', 'lg:col-span-1');
 	}
