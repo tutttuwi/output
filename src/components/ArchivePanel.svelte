@@ -127,6 +127,15 @@ onMount(async () => {
                             ></div>
                         </div>
 
+                        <!-- post category -->
+                        <div class="w-[15%] md:w-[10%] transition text-sm text-right flex items-center justify-end">
+                            {#if post.data.category}
+                                <span class="inline-block px-2 py-0.5 rounded bg-[var(--primary)]/10 text-[var(--primary)] text-xs font-medium max-w-full overflow-hidden text-ellipsis whitespace-nowrap">
+                                    {post.data.category}
+                                </span>
+                            {/if}
+                        </div>
+
                         <!-- post title -->
                         <div
                                 class="w-[70%] md:max-w-[65%] md:w-[65%] text-left font-bold
