@@ -8,11 +8,9 @@ draft: false
 ---
 
 
-# オラクル認定資格教科書 Javaプログラマ Bronze SE7
+オラクル認定資格教科書 Javaプログラマ Bronze SE7
 
-<div style="text-align:center; margin-bottom: 40px">
-<img src="/img/cover/2014_06_java_bronze.jpg" alt="2014_06_java_bronze" title="2014_06_java_bronze" style="width:980px">
-</div>
+![2014_06_java_bronze](/img/cover/2014_06_java_bronze.jpg)
 
 - 目次
   - 第1章　Java言語のプログラムの流れ

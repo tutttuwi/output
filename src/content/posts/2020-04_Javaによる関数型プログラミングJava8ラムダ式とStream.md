@@ -7,7 +7,7 @@ draft: false
 ---
 
 
-# Javaによる関数型プログラミングJava8ラムダ式とStream
+Javaによる関数型プログラミングJava8ラムダ式とStream
 
 - 著者：vankat subramaniam
 - 訳：株式会社プログラミングシステム社
@@ -1403,7 +1403,7 @@ public class Evaluation {
 - JDK8には様々な関数型インターフェースを持っている
 - ここでは頻繁に出現する基本的なインターフェースをいくつか紹介
 
-### A.1 Consumer<T>
+### A.1 Consumer`<T>`
 
 - 入力を受け入れ、戻り値を返さない操作を表すインターフェース
 - 有効活用するためには副作用を伴う必要がある
@@ -1434,7 +1434,7 @@ public class Java8Sample {
 }
 ```
 
-### A.2 Supplier<T>
+### A.2 Supplier`<T>`
 
 - 新しいインスタンス、またはあらかじめ生成しておいたインスタンスを返すファクトリ。
 
@@ -1463,7 +1463,7 @@ public class Java8Sample {
 
 - 遅延初期化で少し出てきた程度
 
-### A.3 Predicate<T>
+### A.3 Predicate`<T>`
 
 - 入力値が何らかの条件に該当するかを確認するために有効。
 
