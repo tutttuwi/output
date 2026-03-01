@@ -3,8 +3,8 @@ title: 英語学習関連メモ
 published: 2026-02-25
 description: ''
 image: ''
-tags: ['memo']
-category: 'english'
+tags: ['english']
+category: 'memo'
 draft: true 
 lang: ''
 ---
