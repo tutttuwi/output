@@ -9,3 +9,7 @@ draft: true
 lang: ''
 ---
 
+- [素晴らしい記事](https://example.com)
+  後で読む
+  - 2026-03-01 14:45
+
