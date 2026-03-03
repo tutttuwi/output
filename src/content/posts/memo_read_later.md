@@ -36,3 +36,7 @@ lang: ''
   read later
   - 2026-03-03 09:09
 
+- [https://www.fsa.go.jp/policy/nisa2/tsumitate-simulator/](https://www.fsa.go.jp/policy/nisa2/tsumitate-simulator/)
+  read later
+  - 2026-03-03 11:43
+
