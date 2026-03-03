@@ -40,3 +40,7 @@ lang: ''
   read later
   - 2026-03-03 11:43
 
+- [PRを送るだけでリポジトリを「乗っ取れる」？GitHub Actionsの危ない書き方を実際に検証してみた (hackerbot-claw)](https://zenn.dev/aeyesec/articles/417578718dcced)
+  read later
+  - 2026-03-04 00:18
+
