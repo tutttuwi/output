@@ -32,3 +32,7 @@ lang: ''
   read later
   - 2026-03-02 12:07
 
+- [国会図書館が無償公開したOCRツールが話題に - 記事アクセスランキング - 窓の杜](https://forest.watch.impress.co.jp/docs/serial/accessranking/2089542.html)
+  read later
+  - 2026-03-03 09:09
+
