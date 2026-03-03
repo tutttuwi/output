@@ -44,3 +44,7 @@ lang: ''
   read later
   - 2026-03-04 00:18
 
+- [ChatGPT - Keycloak テストアプリ](https://chatgpt.com/share/69a76461-89b4-800c-b5f4-aa6905217fc6)
+  read later
+  - 2026-03-04 07:45
+
