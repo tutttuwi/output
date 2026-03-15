@@ -3,7 +3,7 @@ title: flutter fvm 設定について
 published: 2026-03-16
 description: ''
 image: ''
-tags: ['markdown']
+tags: ['flutter']
 category: 'スクラップ'
 draft: false
 lang: ''
@@ -38,7 +38,7 @@ flutter --version
 
 ```
 
-- プロジェクトローカルで指定する方法
+### プロジェクトローカルで指定する方法
 
 ```zsh
 # プロジェクトローカルで指定
@@ -49,5 +49,30 @@ fvm use <使用したいバージョン>
 fvm install
 
 ```
+
+- IDE側でSDK設定
+  - vscodeの場合（.vscode/settings.json）
+  - 以下の設定を追加して認識させること
+
+```json
+{
+  "dart.flutterSdkPath": ".fvm/flutter_sdk",
+  "search.exclude": {
+    "**/.fvm": true
+  },
+  "files.exclude": {
+    "**/.fvm": true
+  }
+}
+```
+
+- gitignoreでsdkファイルは除外すること
+
+```.gitignore
+# FVM
+.fvm/flutter_sdk
+```
+
+> でも、プロジェクトごとにsdkを置くのはディスク容量取るのであまりやりたくない
 
 That's all!
