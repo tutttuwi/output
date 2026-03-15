@@ -30,7 +30,7 @@ fvm 3.41.4
 fvm list
 
 # 環境変数設定
-echo -e "\n# FVM Global Flutter Path\nexport PATH=\"\$PATH\":\"\$HOME/fvm/default/bin\"" >> ~/.zshrc
+echo -e "\n# FVM Global Flutter Path\nexport PATH=\"\$HOME/fvm/default/bin\":\"\$PATH\"" >> ~/.zshrc
 source ~/.zshrc
 
 # バージョン確認
