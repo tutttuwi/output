@@ -5,7 +5,7 @@ tags:
   - 入門書
   - KeyCloak
 category: 書籍
-draft: true
+draft: false
 ---
 
 
@@ -214,6 +214,53 @@ Keycloakもバージョン17以降でQuarkusベースに移行し、従来のWil
   - 7.2 外部ユーザーストレージによる認証
   - 7.3 外部アイデンティティープロバイダーによる認証
   - 7.4 本章のまとめ
+
+#### 認証方式についての情報
+
+- この部分についての公式ページ
+  - <https://www.keycloak.org/docs/latest/server_admin/index.html>
+
+- KeyCloakではOTPやパスキー認証が可能
+
+- 認証フローの概要
+  - Executionと呼ばれる個々の認証処理を組み合わせて構成
+- 認証フロートその構成の考え方
+  - 認証フロー要件（Requirement）の種類
+    - **Required（必須）**
+      - フロー内の `Required` 要素は、順番にすべて成功する必要がある
+      - 必須要素のいずれかが失敗した時点で、そのフローは終了する
+    - **Alternative（代替）**
+      - フローが成功と判定されるには、`Alternative` 要素のうち1つが成功すればよい
+      - ただし同じフロー内に `Required` 要素がある場合、`Required` だけで成功条件を満たすため、`Alternative` は実行されない
+    - **Disabled（無効）**
+      - その要素は、フロー成功判定の対象にならない
+    - **Conditional（条件付き）**
+      - この要件タイプはサブフローにのみ設定できる
+      - `Conditional` サブフローには Execution を含めることができ、Execution は論理式として評価される
+      - すべての Execution が `true` の場合、`Conditional` サブフローは `Required` として動作する
+      - いずれかの Execution が `false` の場合、`Conditional` サブフローは `Disabled` として動作する
+      - Execution を設定しない場合、`Conditional` サブフローは `Disabled` として扱われる
+      - フローに Execution が含まれていても、フロー自体が `Conditional` に設定されていない場合、Keycloak は Execution を評価せず、機能的には `Disabled` と同様に扱う
+
+- acr（認証コンテキストクラスリファレンス）クレームを用いたステップアップ認証
+  - **概要**
+    - `acr` は「どの強度で認証したか」を示すクレーム
+    - ステップアップ認証は、通常操作では低い認証強度、重要操作では高い認証強度を要求する考え方
+    - これにより、UXを保ちながら高リスク操作だけを強固に守れる
+  - **よくある利用シーン**
+    - 閲覧系画面: パスワードログインのみで許可
+    - 振込・個人情報変更・管理者操作: OTPやパスキーの追加認証を要求
+  - **具体例（ECサイトの支払い情報変更）**
+    - 1. ユーザーが通常ログイン（例: `acr=low`）
+    - 1. 商品閲覧やカート操作はそのまま許可
+    - 1. 「クレジットカード変更」画面に遷移したとき、アプリ側で高い `acr`（例: `acr=high`）を要求
+    - 1. Keycloak がOTP入力を要求し、成功後に `acr=high` のトークンを再発行
+    - 1. アプリは `acr=high` を確認して、支払い情報変更を許可
+  - **実装時のポイント**
+    - アプリ側で「どの操作にどの `acr` が必要か」を明確に定義する
+    - API側でも `acr` を検証し、フロントだけに依存しない
+    - `acr` の値設計（`low` / `medium` / `high` など）は運用ルールと合わせて統一する
+  - <https://www.keycloak.org/docs/latest/server_admin/index.html#_step-up-flow>
 
 ### 応用編
 
